@@ -1,0 +1,172 @@
+/*===========================
+  CSS Variables
+===========================*/
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --darkerBlue: hsl(215, 27%, 12%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--veryDarkBlue);
+  font-family: "Overpass", sans-serif;
+}
+
+label {
+  user-select: none;
+}
+
+/*===========================
+  Rating Modal
+===========================*/
+
+.ratingModal {
+  width: 100%;
+  max-width: 410px;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: radial-gradient(at 50% 0%, var(--darkBlue), var(--darkerBlue));
+  border-radius: 35px;
+  margin: 0 24px;
+}
+
+/*===========================
+        Rate State
+      ===========================*/
+.ratingState {
+  padding: 32px;
+}
+
+.h {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.p {
+  color: var(--lightGrey);
+  font-size: 15px;
+  margin: 15px 0;
+  font-weight: 400;
+}
+
+
+input[type='radio'],
+input[type='checbox'] {
+  display: none;
+}
+
+.ratingLogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--darkBlue);
+  color: var(--lightGrey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rateInput {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--darkBlue);
+  color: var(--lightGrey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rateInput:hover,
+.rateInput:focus {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+input:checked+.rateInput {
+  background-color: var(--lightGrey);
+  color: var(--white);
+}
+
+.rateForm {
+  width: 100%;
+}
+
+.rateBox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.rateForm input[type='submit'] {
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  width: 100%;
+  height: 45px;
+  background-color: var(--orange);
+  color: var(--white);
+  border-radius: 22px;
+  border: none;
+  outline: none;
+  margin: 15px 0;
+}
+
+.rateForm input[type='submit']:hover,
+.rateForm input[type='submit']:focus {
+  background-color: var(--white);
+  color: var(--orange);
+  border: none;
+  outline: none;
+}
+
+/*===========================
+        Thank State
+      ===========================*/
+
+.thankYouState {
+
+  max-width: 410px;
+  display: none;
+  padding: 32px;
+}
+
+.selectedRate {
+  height: 50px;
+  border-radius: 22px;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: var(--darkBlue);
+  color: var(--orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
+
+.txtAlignCenter {
+  text-align: center;
+}
+
+.thankYouIllustration {
+  margin: 15px auto;
+  width: fit-content;
+}
